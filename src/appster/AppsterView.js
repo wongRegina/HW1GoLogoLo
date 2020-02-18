@@ -520,7 +520,45 @@ export default class AppsterView {
     * This method is for showing the yes/no dialog.
     */
    showDialog() {
-       let dialog = document.getElementById(AppsterGUIId.MODAL_YES_NO_DIALOG);
+       let dialog = document.getElementById(AppsterGUIId.APPSTER_YES_NO_MODAL);
        dialog.classList.add(AppsterGUIClass.IS_VISIBLE);
    }
+
+   /**
+    * This method show the text input modal
+    */
+   showTextInputModal(){
+       let dialog = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
+       dialog.classList.add(AppsterGUIClass.IS_VISIBLE);
+   }
+
+    /**
+    * This method show the error message when there is already a logo with that name
+    */
+   showErrorForDuplicateText(){
+       console.log("showErrorForDuplicateText")
+       this.hideForErrorMessage();
+       let dialog = document.getElementById(AppsterGUIId.APPSTER_CONFIRM_MODAL);
+       dialog.classList.add(AppsterGUIClass.IS_VISIBLE);
+   }
+
+   hideForErrorMessage(){
+        let dialog = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
+        dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
+   }
+
+   hideMessage(){
+       console.log("hideMessage");
+       let dialog = document.getElementById(AppsterGUIId.APPSTER_CONFIRM_MODAL);
+       dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
+   }
+
+   processCancelDelete(){
+       console.log("processCancelDelete");
+       let dialog = document.getElementById(AppsterGUIId.APPSTER_YES_NO_MODAL);
+       dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
+   }
+
+
+
 }

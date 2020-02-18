@@ -39,4 +39,9 @@ export const GoLogoLoText = {
     GOLOGOLO_BORDER_THICKNESS_TEXT: "gologolo_border_thickness_text",
     GOLOGOLO_PADDING_TEXT: "gologolo_padding_text",
     GOLOGOLO_MARGIN_TEXT: "gologolo_margin_text"
-}
+};
+
+export const GoLogoLoCallBack ={
+    GOLOGOGO_PROCESS_ENTER_CREATE_WORK: "processEnterCreateWork",
+    GOLOGOGO_PROCESS_CANCEL_CREATE_WORK: "processCancelCreateWork"
+};

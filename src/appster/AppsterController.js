@@ -36,8 +36,11 @@ export default class AppsterController {
         this.registerEventHandler(AppsterGUIId.APPSTER_EDIT_TRASH, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_DELETE_WORK]);
 
         // AND THE MODAL BUTTONS
-        this.registerEventHandler(AppsterGUIId.DIALOG_YES_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CONFIRM_DELETE_WORK]);
-        this.registerEventHandler(AppsterGUIId.DIALOG_NO_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CANCEL_DELETE_WORK]);
+        this.registerEventHandler(AppsterGUIId.APPSTER_YES_NO_MODAL_YES_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CONFIRM_DELETE_WORK]);
+        this.registerEventHandler(AppsterGUIId.APPSTER_YES_NO_MODAL_NO_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_CANCEL_DELETE_WORK]);
+        
+        // Okay and cancel buttons
+        this.registerEventHandler(AppsterGUIId.APPSTER_CONFIRM_MODAL_OK_BUTTON, AppsterHTML.CLICK, this[AppsterCallback.APPSTER_PROCESS_OKAY_WORK]);
     }
 
     /**
@@ -86,7 +89,7 @@ export default class AppsterController {
      * This function is called when the user requests to create
      * new work.
      */
-    processCreateNewWork() {
+    processCreateNewWork = () => {
         console.log("processCreateNewWork");
 
         // PROMPT FOR THE NAME OF THE NEW LIST
@@ -108,20 +111,11 @@ export default class AppsterController {
         // GET THE WORK THAT THE USER WANTS TO LOAD
         let clickedElement = event.target;
         let workName = clickedElement.workId;
+        this.model.currentWork = this.model.getRecentWork(workName);
         console.log(workName + " clicked");
 
         // START EDITING THE SELECTED WORK
         this.model.editWork(workName);
-    }
-
-    /**
-     * This function responds to when the user clicks the No
-     * button in the popup dialog after having requested to delete
-     * the loaded work.
-     */
-    processCancelDeleteWork() {
-        // JUST HIDE THE DIALOG
-
     }
 
     /**
@@ -136,25 +130,40 @@ export default class AppsterController {
     }
 
     /**
+     * This function responds to when the user clicks the trash
+     * button, i.e. the delete button, in order to delete the
+     * list being edited.
+     */
+    processDeleteWork = () => {
+        console.log("processDeleteWork");
+        this.model.view.showDialog();
+    }
+
+    /**
      * This function responds to when the user clicks the Yes
      * button in the popup dialog after having requested to delete
      * the loaded work.
      */
-    processConfirmDeleteWork() {
+    processConfirmDeleteWork = () => {
         // DELETE THE WORK
-        this.model.removeWork(this.model.getWorkToEdit());
-
+        this.model.removeWork(this.model.currentWork);
+        this.model.view.processCancelDelete();
         // GO BACK TO THE HOME SCREEN
         this.model.goHome();
     }
 
     /**
-     * This function responds to when the user clicks the trash
-     * button, i.e. the delete button, in order to delete the
-     * list being edited.
+     * This function responds to when the user clicks the No
+     * button in the popup dialog after having requested to delete
+     * the loaded work.
      */
-    processDeleteWork() {
-        // VERIFY VIA A DIALOG BOX
-        window.todo.model.view.showDialog();
+    processCancelDeleteWork = () => {
+        console.log("processCancelDeleteWork");
+        this.model.view.processCancelDelete();
     }
+
+    processOkayWork =()=>{
+        this.model.view.hideMessage();
+    }
+
 }
