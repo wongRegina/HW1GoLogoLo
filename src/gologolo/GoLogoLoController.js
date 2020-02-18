@@ -2,6 +2,7 @@ import AppsterController from '../appster/AppsterController.js'
 import {AppsterGUIId, AppsterHTML} from '../appster/AppsterConstants.js'
 import {GoLogoLoCallBack} from './GoLogoLoConstants.js'
 import GoLogoLoLogo from './GoLogoLoLogo.js'
+import Appster from '../appster/Appster.js';
 
 export default class GoLogoLoController
  extends AppsterController {
@@ -20,6 +21,7 @@ export default class GoLogoLoController
         // Enter and Cancel Button
         this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_ENTER_BUTTON, AppsterHTML.CLICK, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_ENTER_CREATE_WORK]);
         this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_CANCEL_BUTTON, AppsterHTML.CLICK, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_CANCEL_CREATE_WORK]);
+        this.registerEventHandler(AppsterGUIId.APPSTER_EDIT_TEXT_MODAL_ENTER_BUTTON, AppsterHTML.CLICK, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_ENTER_EDIT_TEXT])
     }
 
     processEnterCreateWork = () =>{
@@ -39,5 +41,9 @@ export default class GoLogoLoController
     processCancelCreateWork = () => {
         console.log("processCancelCreateWork");
         this.model.view.processCancelButton();
+    }
+
+    processEditText = () =>{
+        
     }
 }

@@ -20,6 +20,9 @@
         {"appster_text_input_modal_cancel_button_text": "Cancel"},
         {"appster_text_input_modal_footer_text": "Creating New Logo"},
 
+        {"appster_text_edit_modal_text": "Enter the text for your logo: "},
+        {"appster_text_edit_modal_footer_text": "Edit the text on you logo"},
+
         {"gologolo_edit_text_text": "Edit Text &#x270e;"},
         {"gologolo_font_size_text": "Font Size: "},
         {"gologolo_text_color_text": "Text Color: "},

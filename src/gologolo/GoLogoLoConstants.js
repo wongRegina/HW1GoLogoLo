@@ -43,5 +43,6 @@ export const GoLogoLoText = {
 
 export const GoLogoLoCallBack ={
     GOLOGOGO_PROCESS_ENTER_CREATE_WORK: "processEnterCreateWork",
-    GOLOGOGO_PROCESS_CANCEL_CREATE_WORK: "processCancelCreateWork"
+    GOLOGOGO_PROCESS_CANCEL_CREATE_WORK: "processCancelCreateWork",
+    GOLOGOGO_PROCESS_ENTER_EDIT_TEXT: "processEditText"
 };
