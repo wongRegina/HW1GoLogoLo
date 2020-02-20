@@ -164,6 +164,7 @@ export default class AppsterController {
 
     processOkayWork =()=>{
         this.model.view.hideMessage();
+        document.getElementById(AppsterGUIId.APPSTER_CONFIRM_MODAL).classList.remove(AppsterGUIClass.IS_VISIBLE);
     }
 
 }

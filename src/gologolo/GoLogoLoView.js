@@ -128,6 +128,6 @@ export default class GoLogoLoView extends AppsterView {
         let marginSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_MARGIN_SLIDER);
         currentWork.setEverything(textDiv.innerHTML, fontSizeSlider.value , textColorPicker.value, backgroundColorPicker.value,
             borderColorPicker.value, borderRadiusSlider.value, borderThicknessSlider.value, paddingSlider.value, marginSlider.value);
-        this.loadWork(currentWork); 
+        this.loadWorkStyle(currentWork); 
     }
 }

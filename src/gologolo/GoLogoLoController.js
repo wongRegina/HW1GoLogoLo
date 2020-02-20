@@ -1,5 +1,5 @@
 import AppsterController from '../appster/AppsterController.js'
-import {AppsterGUIId, AppsterHTML} from '../appster/AppsterConstants.js'
+import {AppsterGUIId, AppsterHTML,AppsterGUIClass} from '../appster/AppsterConstants.js'
 import {GoLogoLoCallBack, GoLogoLoGUIId} from './GoLogoLoConstants.js'
 import GoLogoLoLogo from './GoLogoLoLogo.js'
 import Appster from '../appster/Appster.js';
@@ -41,6 +41,7 @@ export default class GoLogoLoController
         }
         else{
             this.model.prependWork(this.model.createNewWork(dialog));
+            document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL).classList.remove(AppsterGUIClass.IS_VISIBLE);
         }
     }
     
