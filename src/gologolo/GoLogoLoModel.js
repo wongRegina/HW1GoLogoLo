@@ -1,5 +1,7 @@
 import AppsterModel from '../appster/AppsterModel.js'
 import GoLogoLoLogo from './GoLogoLoLogo.js'
+import {GoLogoLoCallBack, GoLogoLoGUIId} from './GoLogoLoConstants.js'
+
 
 export default class GoLogoLoModel extends AppsterModel {
     constructor() {
@@ -46,11 +48,22 @@ export default class GoLogoLoModel extends AppsterModel {
 
     updateText() {
         console.log("updateText");
-        
+        this.view.processUpdateText();
     }
 
     updateLogo(){
-        
+        console.log("updateLogo");
+        this.view.processLogoUpdate(this.currentWork);
+    }
+
+    showErrorMessage(){
+        console.log("showErrorMessage");
+        this.view.showErrorForDuplicateText();
+    }
+
+    cancelButton(){
+        console.log("cancelButton");
+        this.view.processCancelButton();
     }
 
     goList(){

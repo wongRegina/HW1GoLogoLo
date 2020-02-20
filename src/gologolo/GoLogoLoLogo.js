@@ -4,11 +4,11 @@ import {GoLogoLoDefaults} from './GoLogoLoConstants.js'
 export default class GoLogoLoLogo extends AppWork {
     constructor(name) {
         super(name);
-        this.text = GoLogoLoDefaults.GOLOGOLO_DEFAULT_TEXT_COLOR;
+        this.text = GoLogoLoDefaults.GOLOGOLO_DEFAULT_TEXT;
         this.fontSize = GoLogoLoDefaults.GOLOGOLO_DEFAULT_FONT_SIZE;
-        this.textColor = GoLogoLoDefaults.GOLOGOLO_DEFAULT_BACKGROUND_COLOR;
-        this.backgroundColor = GoLogoLoDefaults.GOLOGOLO_DEFAULT_BORDER_COLOR;
-        this.borderColor = GoLogoLoDefaults.GOLOGOLO_DEFAULT_BORDER_RADIUS;
+        this.textColor = GoLogoLoDefaults.GOLOGOLO_DEFAULT_TEXT_COLOR;
+        this.backgroundColor = GoLogoLoDefaults.GOLOGOLO_DEFAULT_BACKGROUND_COLOR;
+        this.borderColor = GoLogoLoDefaults.GOLOGOLO_DEFAULT_BORDER_COLOR;
         this.borderThickness = GoLogoLoDefaults.GOLOGOLO_DEFAULT_BORDER_THICKNESS;
         this.padding = GoLogoLoDefaults.GOLOGOLO_DEFAULT_PADDING;
         this.margin = GoLogoLoDefaults.GOLOGOLO_DEFAULT_MARGIN;
@@ -86,13 +86,14 @@ export default class GoLogoLoLogo extends AppWork {
         return this.margin;
     }
 
-    setEverything(text, fontSize, textColor, bgColor, bColor, border, padding, margin){
+    setEverything(text, fontSize, textColor, bgColor, bColor, border, borderT,padding, margin){
         this.setText(text);
         this.setFontSize(fontSize);
         this.setTextColor(textColor);
         this.setBackgroundColor(bgColor);
         this.setBorderColor(bColor);
         this.setBorderRadius(border);
+        this.setBorderThickness(borderT);
         this.setPadding(padding);
         this.setMargin(margin);
     }

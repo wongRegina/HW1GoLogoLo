@@ -20,14 +20,14 @@ export default class GoLogoLoController
         this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_BUTTON, AppsterHTML.CLICK, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_ENTER_EDIT_TEXT])
         
         //Edit Logo Stuff
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER, AppsterHTML.INPUT, this[]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_TEXT_COLOR_PICKER, AppsterHTML.INPUT, this[]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER, AppsterHTML.INPUT, this[]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER, AppsterHTML.INPUT, this[]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER, AppsterHTML.INPUT, this[]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER, AppsterHTML.INPUT, this[]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_PADDING_SLIDER, AppsterHTML.INPUT, this[]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_MARGIN_SLIDER, AppsterHTML.INPUT, this[]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_TEXT_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_PADDING_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_MARGIN_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
     }
 
     processEnterCreateWork = () =>{
@@ -37,7 +37,7 @@ export default class GoLogoLoController
 
         }
         else if(this.model.getRecentWork(dialog) != null){
-            this.model.view.showErrorForDuplicateText();
+            this.model.showErrorMessage();
         }
         else{
             this.model.prependWork(this.model.createNewWork(dialog));
@@ -46,12 +46,20 @@ export default class GoLogoLoController
     
     processCancelCreateWork = () => {
         console.log("processCancelCreateWork");
-        this.model.view.processCancelButton();
+        this.model.cancelButton();
     }
 
     processEditText = () => {
         console.log("processEditText");
-        this.model.view.processUpdateText();
+        this.model.updateText();
     }
+
+    processEditLogo = () =>{
+        console.log("processEditLogo");
+        this.model.updateLogo();
+
+    }
+
+
 
 }
