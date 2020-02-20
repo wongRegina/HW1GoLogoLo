@@ -85,4 +85,15 @@ export default class GoLogoLoLogo extends AppWork {
     getMargin() {
         return this.margin;
     }
+
+    setEverything(text, fontSize, textColor, bgColor, bColor, border, padding, margin){
+        this.setText(text);
+        this.setFontSize(fontSize);
+        this.setTextColor(textColor);
+        this.setBackgroundColor(bgColor);
+        this.setBorderColor(bColor);
+        this.setBorderRadius(border);
+        this.setPadding(padding);
+        this.setMargin(margin);
+    }
 }

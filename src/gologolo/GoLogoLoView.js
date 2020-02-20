@@ -107,4 +107,8 @@ export default class GoLogoLoView extends AppsterView {
         let dialog = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
         dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
     }
+
+    processUpdateText(){
+        console.log("processUpdateText");
+    }
 }

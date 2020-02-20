@@ -44,5 +44,15 @@ export const GoLogoLoText = {
 export const GoLogoLoCallBack ={
     GOLOGOGO_PROCESS_ENTER_CREATE_WORK: "processEnterCreateWork",
     GOLOGOGO_PROCESS_CANCEL_CREATE_WORK: "processCancelCreateWork",
-    GOLOGOGO_PROCESS_ENTER_EDIT_TEXT: "processEditText"
+    GOLOGOGO_PROCESS_ENTER_EDIT_TEXT: "processEditText",
+
+    //Edit Logo call back
+    GOLOGOLO_PROCESS_FONT_SIZE_SLIDER: "processFontSizeSlider",
+    GOLOGOLO_PROCESS_TEXT_COLOR_PICKER: "processTextColor",
+    GOLOGOLO_PROCESS_BACKGROUND_COLOR_PICKER: "processBGColor",
+    GOLOGOLO_PROCESS_BORDER_COLOR_PICKER: "processBorderColor",
+    GOLOGOLO_PROCESS_BORDER_RADIUS_SLIDER: "processBorderRadius",
+    GOLOGOLO_PROCESS_BORDER_THICKNESS_SLIDER: "processBorderThickness",
+    GOLOGOLO_PROCESS_PADDING_SLIDER: "processPadding",
+    GOLOGOLO_PROCESS_MARGIN_SLIDER: "processMargin"
 };
