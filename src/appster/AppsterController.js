@@ -1,4 +1,4 @@
-import {AppsterCallback, AppsterGUIId, AppsterHTML} from './AppsterConstants.js'
+import {AppsterCallback, AppsterGUIId, AppsterHTML,AppsterGUIClass} from './AppsterConstants.js'
 
 export default class AppsterController {
     constructor() {

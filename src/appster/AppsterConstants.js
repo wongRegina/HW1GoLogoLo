@@ -172,8 +172,5 @@ export const AppsterText = {
     APPSTER_TEXT_INPUT_MODAL_CANCEL_BUTTON_TEXT: "appster_text_input_modal_cancel_button_text",
     APPSTER_TEXT_INPUT_MODAL_FOOTER_TEXT: "appster_text_input_modal_footer_text",
 
-    APPSTER_TEXT_EDIT_MODAL_TEXT: "appster_text_edit_modal_text",
-    APPSTER_TEXT_EDOT_MODAL_FOOTER_TEXT: "appster_text_input_modal_footer_text",
-
     APPSTER_MODAL_ANIMATION_TEXT: "appster_slideInOutLeft"
 }
