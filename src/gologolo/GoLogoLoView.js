@@ -1,5 +1,5 @@
 import {GoLogoLoGUIClass, GoLogoLoGUIId, GoLogoLoText} from './GoLogoLoConstants.js'
-import {AppsterHTML, AppsterSymbols, AppsterGUIId, AppsterGUIClass} from '../appster/AppsterConstants.js'
+import {AppsterHTML, AppsterSymbols, AppsterGUIId, AppsterGUIClass,AppsterText} from '../appster/AppsterConstants.js'
 import AppsterView from '../appster/AppsterView.js'
 
 export default class GoLogoLoView extends AppsterView {
@@ -79,7 +79,7 @@ export default class GoLogoLoView extends AppsterView {
         this.loadWorkStyle(work);
     }
 
-    buildGoLogoLoEditInputModal() {
+    buildAppsterEditInputModal() {
         let textModal = this.buildElement(  AppsterHTML.DIV, 
                                             GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL,
                                             [AppsterGUIClass.APPSTER_MODAL],
@@ -100,7 +100,7 @@ export default class GoLogoLoView extends AppsterView {
                                                 "",
                                                 [],
                                                 [],
-                                                GoLogoLoText.GOLOGOLO_EDIT_INPUT_MODAL_PROMPT_TEXT);
+                                                AppsterText.APPSTER_TEXT_INPUT_MODAL_PROMPT_TEXT);
         let textFieldAttributes = [];
         textFieldAttributes[AppsterHTML.TYPE] = AppsterHTML.TEXT;
         let textField = this.buildElement(  AppsterHTML.INPUT,
@@ -121,7 +121,7 @@ export default class GoLogoLoView extends AppsterView {
                                             "", 
                                             [AppsterGUIClass.APPSTER_MODAL_FOOTER],
                                             [],
-                                            GoLogoLoText.GOLOGOLO_EDIT_INPUT_MODAL_FOOTER_TEX);
+                                            GoLogoLoText.GOLOGOLO_EDIT_INPUT_MODAL_FOOTER_TEXT);
         p.appendChild(strong);
         section.appendChild(p);
         textFrame.appendChild(header);

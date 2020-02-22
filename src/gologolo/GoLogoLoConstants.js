@@ -12,7 +12,7 @@ export const GoLogoLoDefaults = {
 };
 
 export const GoLogoLoGUIClass = {
-    GOLOGOLO_CONTROL_PROMPT: 'gologolo_control_prompt'
+    GOLOGOLO_CONTROL_PROMPT: 'gologolo_control_prompt',
 };
 
 export const GoLogoLoGUIId = {
