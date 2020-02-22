@@ -89,12 +89,14 @@ export const AppsterGUIId = {
     APPSTER_YES_NO_MODAL_YES_BUTTON: 'appster_yes_no_modal_yes_button',
     APPSTER_YES_NO_MODAL_NO_BUTTON: 'appster_yes_no_modal_no_button',
     APPSTER_YES_NO_MODAL_FOOTER: 'appster_yes_no_modal_footer',
+
     APPSTER_CONFIRM_MODAL: 'appster_confirm_modal',
     APPSTER_CONFIRM_MODAL_FRAME: 'appster_confirm_modal_frame',
     APPSTER_CONFIRM_MODAL_HEADER: 'appster_confirm_modal_header',
     APPSTER_CONFIRM_MODAL_SECTION: 'appster_confirm_modal_section',
     APPSTER_CONFIRM_MODAL_OK_BUTTON: 'appster_confirm_modal_ok_button',
     APPSTER_CONFIRM_MODAL_FOOTER: 'appster_confirm_frame',
+
     APPSTER_TEXT_INPUT_MODAL: 'appster_text_input_modal',
     APPSTER_TEXT_INPUT_MODAL_FRAME: 'appster_text_input_modal_frame',
     APPSTER_TEXT_INPUT_MODAL_HEADER: 'appster_text_input_modal_header',
@@ -103,10 +105,6 @@ export const AppsterGUIId = {
     APPSTER_TEXT_INPUT_MODAL_ENTER_BUTTON: 'appster_text_input_modal_enter_button',
     APPSTER_TEXT_INPUT_MODAL_CANCEL_BUTTON: 'appster_text_input_modal_cancel_button',
     APPSTER_TEXT_INPUT_MODAL_FOOTER: 'appster_text_input_modal_footer'
-    // APPSTER_EDIT_TEXT_MODAL:
-    // APPSTER_TEXT_INPUT_MODAL_TEXTFIELD: "appster_text_input_modal_textfield",
-    // APPSTER_EDIT_TEXT_MODAL_TEXT:
-    // APPSTER_EDIT_TEXT_MODAL_FOOTER:
 };
 
 /**
