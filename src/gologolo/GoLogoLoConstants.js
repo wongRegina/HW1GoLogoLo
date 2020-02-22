@@ -57,5 +57,6 @@ export const GoLogoLoCallBack ={
     GOLOGOGO_PROCESS_ENTER_EDIT_TEXT: "processEditText",
 
     //Edit Logo call back
-    GOLOGOGO_PROCESS_EDIT_LOGO: "processEditLogo"
+    GOLOGOGO_PROCESS_EDIT_LOGO: "processEditLogo",
+    GOLOGOGO_PROCESS_EDIT_TEXT_LOGO: "processEditTextLogo"
 };

@@ -172,6 +172,26 @@ export default class GoLogoLoView extends AppsterView {
         let dialog = document.getElementById(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL);
         dialog.classList.add(AppsterGUIClass.IS_VISIBLE);
     }
+    
+    processUpdateLogoText(currentWork, name){
+        console.log("processUpdateText");
+        let textDiv = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);
+        let fontSizeSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER);
+        let textColorPicker = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT_COLOR_PICKER);
+        let backgroundColorPicker = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER);
+        let borderColorPicker = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER);
+        let borderRadiusSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER);
+        let borderThicknessSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER);
+        let paddingSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_PADDING_SLIDER);
+        let marginSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_MARGIN_SLIDER);     
+        currentWork.setEverything(name, fontSizeSlider.value , textColorPicker.value, backgroundColorPicker.value,
+            borderColorPicker.value, borderRadiusSlider.value, borderThicknessSlider.value, paddingSlider.value, marginSlider.value);
+        console.log("processUpdateText changed " + name);
+        let dialog = document.getElementById(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL);
+        dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);   
+        this.loadWorkStyle(currentWork); 
+
+    }
 
     processLogoUpdate(currentWork){
         let textDiv = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);

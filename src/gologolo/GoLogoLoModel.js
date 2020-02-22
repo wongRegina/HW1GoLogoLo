@@ -51,9 +51,9 @@ export default class GoLogoLoModel extends AppsterModel {
         this.view.processUpdateText();
     }
 
-    updateLogo(){
+    updateLogo(name){
         console.log("updateLogo");
-        this.view.processLogoUpdate(this.currentWork);
+        this.view.processUpdateLogoText(this.currentWork,name);
     }
 
     showErrorMessage(){
