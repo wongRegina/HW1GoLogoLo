@@ -561,6 +561,4 @@ export default class AppsterView {
        dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
    }
 
-
-
 }
