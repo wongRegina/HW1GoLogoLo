@@ -60,7 +60,4 @@ export default class GoLogoLoController
         this.model.updateLogo();
 
     }
-
-
-
 }

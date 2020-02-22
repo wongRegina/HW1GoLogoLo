@@ -29,8 +29,8 @@ export const GoLogoLoGUIId = {
     GOLOGOLO_TEXT: "gologolo_text",
 
     GOLOGOLO_EDIT_TEXT_MODAL: "gologolo_edit_text_modal",
-    GOLOGOLO_EDIT_TEXT_MODAL_ENTER_BUTTON: "gologolo_edit_text_modal_enter_button",
-    GOLOGOLO_EDIT_TEXT_MODAL_CANCEL_BUTTON: "gologolo_edit_text_modal_cancel_button",
+    GOLOGOLO_EDIT_TEXT_MODAL_ENTER_BUTTON: "gologolo_edit_input_modal_enter_button_text",
+    GOLOGOLO_EDIT_TEXT_MODAL_CANCEL_BUTTON: "gologolo_edit_input_modal_cancel_button_text",
     GOLOGOLO_EDIT_TEXT_MODAL_FOOTER: "gologolo_edit_text_modal_footer"
 };
 
@@ -46,9 +46,9 @@ export const GoLogoLoText = {
     GOLOGOLO_MARGIN_TEXT: "gologolo_margin_text",
 
     GOLOGOLO_EDIT_INPUT_MODAL_PROMPT_TEXT: "gologolo_edit_input_modal_prompt_text",
-    GOLOGOLO_EDIT_INPUT_MODAL_ENTER_BUTTON_TEXT: "gologolo_edit_input_modal_enter_button_text",
-    GOLOGOLO_EDIT_INPUT_MODAL_CANCEL_BUTTON_TEXT: "gologolo_edit_input_modal_cancel_button_text",
-    GOLOGOLO_EDIT_INPUT_MODAL_FOOTER_TEXT: "gologolo_edit_input_modal_footer_text",
+    GOLOGOLO_EDIT_INPUT_MODAL_ENTER_BUTTON_TEXT: "gologogo_edit_input_modal_enter_button_text",
+    GOLOGOLO_EDIT_INPUT_MODAL_CANCEL_BUTTON_TEXT: "gologogo_edit_input_modal_cancel_button_text",
+    GOLOGOLO_EDIT_INPUT_MODAL_FOOTER_TEXT: "gologolo_edit_edit_modal_footer_text",
 };
 
 export const GoLogoLoCallBack ={
