@@ -43,6 +43,7 @@ export default class GoLogoLoController
         else{
             this.model.prependWork(this.model.createNewWork(dialog));
             document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL).classList.remove(AppsterGUIClass.IS_VISIBLE);
+            document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value ="";
         }
     }
     
@@ -65,7 +66,7 @@ export default class GoLogoLoController
         console.log("processEditTextLogo");
         let newName = document.getElementById(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL_TEXTFIELD).value;
         console.log(newName);
-        this.model.updateLogo(newName);
+        this.model.updateLogoText(newName);
         let dialog = document.getElementById(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL);
         dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
     }
