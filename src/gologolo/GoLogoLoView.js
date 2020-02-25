@@ -171,6 +171,7 @@ export default class GoLogoLoView extends AppsterView {
 
     processUpdateText(){
         console.log("processUpdateText");
+        document.getElementById(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL_TEXTFIELD).value = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT).innerHTML;
         let dialog = document.getElementById(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL);
         dialog.classList.add(AppsterGUIClass.IS_VISIBLE);
     }
