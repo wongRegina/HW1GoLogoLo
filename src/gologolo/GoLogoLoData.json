@@ -11,7 +11,7 @@
         {"appster_yes_no_modal_no_button_text": "No"},
         {"appster_yes_no_modal_footer_text": "The logo will not be retreivable."},
         
-        {"appster_confirm_modal_prompt_text": "Illegal name, logo already exists with that name"},
+        {"appster_confirm_modal_prompt_text": "Illegal name, logo already exists with that name or logo needs at least one character"},
         {"appster_confirm_modal_ok_button_text": "Ok"},
         {"appster_confirm_modal_footer_text": "Duplicate Name"},
         
