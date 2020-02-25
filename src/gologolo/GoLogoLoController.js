@@ -15,31 +15,29 @@ export default class GoLogoLoController
         super.registerAppsterEventHandlers();
 
         // Enter and Cancel Button
-        this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_ENTER_BUTTON, AppsterHTML.CLICK, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_ENTER_CREATE_WORK]);
-        this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_CANCEL_BUTTON, AppsterHTML.CLICK, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_CANCEL_CREATE_WORK]);
+        this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_ENTER_BUTTON, AppsterHTML.CLICK, this[GoLogoLoCallBack.GOLOGOLO_PROCESS_ENTER_CREATE_WORK]);
+        this.registerEventHandler(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_CANCEL_BUTTON, AppsterHTML.CLICK, this[GoLogoLoCallBack.GOLOGOLO_PROCESS_CANCEL_CREATE_WORK]);
         
         //Edit Logo Stuff
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_TEXT_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_PADDING_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_MARGIN_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOLO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_TEXT_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOLO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOLO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_COLOR_PICKER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOLO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_RADIUS_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOLO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOLO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_PADDING_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOLO_PROCESS_EDIT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_MARGIN_SLIDER, AppsterHTML.INPUT, this[GoLogoLoCallBack.GOLOGOLO_PROCESS_EDIT_LOGO]);
     
         // Edit Text stuff
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_BUTTON, AppsterHTML.CLICK, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_ENTER_EDIT_TEXT]);
-        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL_ENTER_BUTTON, AppsterHTML.CLICK, this[GoLogoLoCallBack.GOLOGOGO_PROCESS_EDIT_TEXT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_BUTTON, AppsterHTML.CLICK, this[GoLogoLoCallBack.GOLOGOLO_PROCESS_ENTER_EDIT_TEXT]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL_ENTER_BUTTON, AppsterHTML.CLICK, this[GoLogoLoCallBack.GOLOGOLO_PROCESS_EDIT_TEXT_LOGO]);
+        this.registerEventHandler(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL_CANCEL_BUTTON, AppsterHTML.CLICK, this[GoLogoLoCallBack.GOLOGOLO_PROCESS_CANCEL_CREATE_WORK]);
     }
 
     processEnterCreateWork = () =>{
         console.log("processEnterCreateWork");
-        let dialog = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value;
+        let dialog = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value.trim();
         if(dialog.length < 1){
-
-        }
-        else if(this.model.getRecentWork(dialog) != null){
             this.model.showErrorMessage();
         }
         else{
@@ -65,8 +63,7 @@ export default class GoLogoLoController
 
     processEditTextLogo = () =>{
         console.log("processEditTextLogo");
-        let nameTextField = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD);
-        let newName = nameTextField.innerHTML;
+        let newName = document.getElementById(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL_TEXTFIELD).value;
         console.log(newName);
         this.model.updateLogo(newName);
         let dialog = document.getElementById(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL);

@@ -104,7 +104,7 @@ export default class GoLogoLoView extends AppsterView {
         let textFieldAttributes = [];
         textFieldAttributes[AppsterHTML.TYPE] = AppsterHTML.TEXT;
         let textField = this.buildElement(  AppsterHTML.INPUT,
-                                            AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD,
+                                            GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL_TEXTFIELD,
                                             [AppsterGUIClass.APPSTER_MODAL_TEXTFIELD],
                                             textFieldAttributes);
         let enterButton = this.buildElement(   AppsterHTML.BUTTON, 
@@ -165,6 +165,8 @@ export default class GoLogoLoView extends AppsterView {
         console.log("processCancelButton");
         let dialog = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL);
         dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
+        dialog = document.getElementById(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL);
+        dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
     }
 
     processUpdateText(){
@@ -176,6 +178,7 @@ export default class GoLogoLoView extends AppsterView {
     processUpdateLogoText(currentWork, name){
         console.log("processUpdateText");
         let textDiv = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT);
+        textDiv.innerHTML = name;
         let fontSizeSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER);
         let textColorPicker = document.getElementById(GoLogoLoGUIId.GOLOGOLO_TEXT_COLOR_PICKER);
         let backgroundColorPicker = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BACKGROUND_COLOR_PICKER);
@@ -186,11 +189,10 @@ export default class GoLogoLoView extends AppsterView {
         let marginSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_MARGIN_SLIDER);     
         currentWork.setEverything(name, fontSizeSlider.value , textColorPicker.value, backgroundColorPicker.value,
             borderColorPicker.value, borderRadiusSlider.value, borderThicknessSlider.value, paddingSlider.value, marginSlider.value);
-        console.log("processUpdateText changed " + name);
-        let dialog = document.getElementById(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL);
-        dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);   
+        console.log("processUpdateText changed " + name);   
         this.loadWorkStyle(currentWork); 
-
+        let dialog = document.getElementById(GoLogoLoGUIId.GOLOGOLO_EDIT_TEXT_MODAL);
+        dialog.classList.remove(AppsterGUIClass.IS_VISIBLE);
     }
 
     processLogoUpdate(currentWork){
