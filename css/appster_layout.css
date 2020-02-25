@@ -79,6 +79,7 @@
     left: 0%;
     height: 90%;
     top: 10%;
+    overflow: auto;
 }
 #appster_edit_workspace {
     padding-left: 2%;
