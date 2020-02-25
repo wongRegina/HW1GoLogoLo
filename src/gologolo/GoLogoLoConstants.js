@@ -31,7 +31,8 @@ export const GoLogoLoGUIId = {
     GOLOGOLO_EDIT_TEXT_MODAL: "gologolo_edit_text_modal",
     GOLOGOLO_EDIT_TEXT_MODAL_ENTER_BUTTON: "gologolo_edit_input_modal_enter_button_text",
     GOLOGOLO_EDIT_TEXT_MODAL_CANCEL_BUTTON: "gologolo_edit_input_modal_cancel_button_text",
-    GOLOGOLO_EDIT_TEXT_MODAL_FOOTER: "gologolo_edit_text_modal_footer"
+    GOLOGOLO_EDIT_TEXT_MODAL_FOOTER: "gologolo_edit_text_modal_footer",
+    GOLOGOLO_EDIT_TEXT_MODAL_TEXTFIELD: "gologolo_edit_text_modal_textfield"
 };
 
 export const GoLogoLoText = {
@@ -46,17 +47,17 @@ export const GoLogoLoText = {
     GOLOGOLO_MARGIN_TEXT: "gologolo_margin_text",
 
     GOLOGOLO_EDIT_INPUT_MODAL_PROMPT_TEXT: "gologolo_edit_input_modal_prompt_text",
-    GOLOGOLO_EDIT_INPUT_MODAL_ENTER_BUTTON_TEXT: "gologogo_edit_input_modal_enter_button_text",
-    GOLOGOLO_EDIT_INPUT_MODAL_CANCEL_BUTTON_TEXT: "gologogo_edit_input_modal_cancel_button_text",
+    GOLOGOLO_EDIT_INPUT_MODAL_ENTER_BUTTON_TEXT: "GOLOGOLO_edit_input_modal_enter_button_text",
+    GOLOGOLO_EDIT_INPUT_MODAL_CANCEL_BUTTON_TEXT: "GOLOGOLO_edit_input_modal_cancel_button_text",
     GOLOGOLO_EDIT_INPUT_MODAL_FOOTER_TEXT: "gologolo_edit_edit_modal_footer_text",
 };
 
 export const GoLogoLoCallBack ={
-    GOLOGOGO_PROCESS_ENTER_CREATE_WORK: "processEnterCreateWork",
-    GOLOGOGO_PROCESS_CANCEL_CREATE_WORK: "processCancelCreateWork",
-    GOLOGOGO_PROCESS_ENTER_EDIT_TEXT: "processEditText",
+    GOLOGOLO_PROCESS_ENTER_CREATE_WORK: "processEnterCreateWork",
+    GOLOGOLO_PROCESS_CANCEL_CREATE_WORK: "processCancelCreateWork",
+    GOLOGOLO_PROCESS_ENTER_EDIT_TEXT: "processEditText",
 
     //Edit Logo call back
-    GOLOGOGO_PROCESS_EDIT_LOGO: "processEditLogo",
-    GOLOGOGO_PROCESS_EDIT_TEXT_LOGO: "processEditTextLogo"
+    GOLOGOLO_PROCESS_EDIT_LOGO: "processEditLogo",
+    GOLOGOLO_PROCESS_EDIT_TEXT_LOGO: "processEditTextLogo"
 };
