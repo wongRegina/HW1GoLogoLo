@@ -91,7 +91,6 @@ export default class AppsterController {
      */
     processCreateNewWork = () => {
         console.log("processCreateNewWork");
-
         // PROMPT FOR THE NAME OF THE NEW LIST
         
         // MAKE A BRAND NEW LIST

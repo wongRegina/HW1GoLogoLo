@@ -37,19 +37,20 @@ export default class GoLogoLoController
     processEnterCreateWork = () =>{
         console.log("processEnterCreateWork");
         let dialog = document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value.trim();
-        if(dialog.length < 1){
+        if(dialog.length < 1 || this.model.getRecentWork(dialog) != null){
             this.model.showErrorMessage();
         }
         else{
             this.model.prependWork(this.model.createNewWork(dialog));
             document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL).classList.remove(AppsterGUIClass.IS_VISIBLE);
-            document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value ="";
-        }
+        }        
+        document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value ="";
     }
     
     processCancelCreateWork = () => {
         console.log("processCancelCreateWork");
         this.model.cancelButton();
+        document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value ="";
     }
 
     processEditText = () => {
