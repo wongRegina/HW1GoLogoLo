@@ -42,7 +42,6 @@ export default class GoLogoLoModel extends AppsterModel {
                 appWork.setMargin(jsonWork.margin);
             }
         }
-
         return appWork;
     }
 

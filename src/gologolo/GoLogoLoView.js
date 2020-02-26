@@ -188,7 +188,7 @@ export default class GoLogoLoView extends AppsterView {
         let borderThicknessSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER);
         let paddingSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_PADDING_SLIDER);
         let marginSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_MARGIN_SLIDER);     
-        currentWork.setEverything(name, fontSizeSlider.value , textColorPicker.value, backgroundColorPicker.value,
+        currentWork.setEverything(name, fontSizeSlider.value, textColorPicker.value, backgroundColorPicker.value,
             borderColorPicker.value, borderRadiusSlider.value, borderThicknessSlider.value, paddingSlider.value, marginSlider.value);
         console.log("processUpdateText changed " + name);   
         this.loadWorkStyle(currentWork); 
@@ -206,7 +206,16 @@ export default class GoLogoLoView extends AppsterView {
         let borderThicknessSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_BORDER_THICKNESS_SLIDER);
         let paddingSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_PADDING_SLIDER);
         let marginSlider = document.getElementById(GoLogoLoGUIId.GOLOGOLO_MARGIN_SLIDER);
-        currentWork.setEverything(textDiv.innerHTML, fontSizeSlider.value , textColorPicker.value, backgroundColorPicker.value,
+        if(fontSizeSlider.value == 0){
+            document.getElementById(GoLogoLoGUIId.GOLOGOLO_FONT_SIZE_SLIDER).value = 1;
+            currentWork.setEverything(textDiv.innerHTML, 1, textColorPicker.value, backgroundColorPicker.value,
+                borderColorPicker.value, borderRadiusSlider.value, borderThicknessSlider.value, paddingSlider.value, marginSlider.value);
+        }
+        else{
+            currentWork.setEverything(textDiv.innerHTML, fontSizeSlider.value, textColorPicker.value, backgroundColorPicker.value,
+                borderColorPicker.value, borderRadiusSlider.value, borderThicknessSlider.value, paddingSlider.value, marginSlider.value);
+        }
+        currentWork.setEverything(textDiv.innerHTML, fontSizeSlider.value, textColorPicker.value, backgroundColorPicker.value,
             borderColorPicker.value, borderRadiusSlider.value, borderThicknessSlider.value, paddingSlider.value, marginSlider.value);
         this.loadWorkStyle(currentWork); 
     }
