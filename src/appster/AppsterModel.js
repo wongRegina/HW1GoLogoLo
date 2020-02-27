@@ -123,4 +123,20 @@ export default class AppsterModel {
         this.prependList(this.listToEdit);
         this.view.loadListData(this.listToEdit);
     }
+
+    processShowDialog(){
+        this.view.showDialog();
+    }
+
+    processingConfirmDeleteWork(){
+        this.view.processCancelDelete();
+    }
+
+    processingCancelDeleteWork(){
+        this.view.processCancelDelete();
+    }
+
+    processhideMessage(){
+        this.view.hideMessage();
+    }
 }

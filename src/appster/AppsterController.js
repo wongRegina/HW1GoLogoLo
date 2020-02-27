@@ -135,7 +135,7 @@ export default class AppsterController {
      */
     processDeleteWork = () => {
         console.log("processDeleteWork");
-        this.model.view.showDialog();
+        this.model.processShowDialog();
     }
 
     /**
@@ -146,7 +146,7 @@ export default class AppsterController {
     processConfirmDeleteWork = () => {
         // DELETE THE WORK
         this.model.removeWork(this.model.currentWork);
-        this.model.view.processCancelDelete();
+        this.model.processingConfirmDeleteWork();
         // GO BACK TO THE HOME SCREEN
         this.model.goHome();
     }
@@ -158,11 +158,11 @@ export default class AppsterController {
      */
     processCancelDeleteWork = () => {
         console.log("processCancelDeleteWork");
-        this.model.view.processCancelDelete();
+        this.model.processingCancelDeleteWork();
     }
 
     processOkayWork =()=>{
-        this.model.view.hideMessage();
+        this.model.processhideMessage();
         document.getElementById(AppsterGUIId.APPSTER_CONFIRM_MODAL).classList.remove(AppsterGUIClass.IS_VISIBLE);
     }
 
