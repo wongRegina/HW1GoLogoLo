@@ -43,6 +43,7 @@ export default class GoLogoLoController
         else{
             this.model.prependWork(this.model.createNewWork(dialog));
             document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL).classList.remove(AppsterGUIClass.IS_VISIBLE);
+            this.model.editWork(dialog);
         }        
         document.getElementById(AppsterGUIId.APPSTER_TEXT_INPUT_MODAL_TEXTFIELD).value ="";
     }
